@@ -1,0 +1,66 @@
+
+/* Style de base du slider */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 400px !important; // Fixe
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid $border-color;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111; // fond gothique
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: absolute; /* Positionner les boutons au-dessus des images */
+  bottom: 20px; /* Placer les boutons au bas du slider */
+  width: 100%; /* Prendre toute la largeur du slider */
+  z-index: 10; /* Assurer que les boutons soient au-dessus du contenu */
+}
+
+.nav-button {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-button.active {
+  background-color: $primary-color; /* Changer la couleur quand un bouton est actif */
+}
+
+.nav-button:hover {
+  background-color: #ffffff;
+  transform: scale(1.2); /* Légère animation lors du survol */
+}

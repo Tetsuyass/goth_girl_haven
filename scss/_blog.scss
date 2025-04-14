@@ -1,0 +1,89 @@
+
+
+/*   ICI CEST LE BLOG MTN    */
+
+/* === BLOG STYLE === */
+
+.blog-container {
+  padding: 40px 20px;
+}
+
+.blog-container h1 {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 42px;
+  color: $primary-color;
+  margin-bottom: 40px;
+}
+
+/* Flexbox pour les articles */
+
+.blog-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Un article de blog */
+.blog-post {
+  background-color: $secondary-color;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba($accent-color, 0.5), 0 0 40px rgba($accent-color, 0.2);
+}
+
+.blog-post img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Titre glitch */
+.blog-post h2 {
+  font-family: "Cinzel", serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: $accent-color;
+  position: relative;
+}
+
+.blog-post h2::after {
+  content: attr(data-glitch);
+  position: absolute;
+  left: 2px;
+  top: 0;
+  color: $accent-color;
+  opacity: 0.3;
+  z-index: -1;
+  transform: translateX(-2px);
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.blog-post p {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.5;
+}

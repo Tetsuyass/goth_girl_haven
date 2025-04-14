@@ -1,0 +1,103 @@
+
+
+/*      LA PAGE CONTACT     */
+
+/* === CONTACT PAGE === */
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.contact-section h1 {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: $primary-color;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Bloc gauche */
+.contact-info {
+  background-color: $secondary-color;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  font-size: 16px;
+  line-height: 1.6;
+
+  h2 {
+    font-family: "Cinzel", serif;
+    font-size: 24px;
+    color: $accent-color;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+
+    li {
+      margin-bottom: 10px;
+      &::before {
+        content: "☾ ";
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+/* Formulaire */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  background-color: $secondary-color;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
+  label {
+    font-weight: bold;
+    color: $accent-color;
+  }
+
+  input, textarea {
+    padding: 10px;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: #1c1c1c;
+    color: $text-color;
+    font-family: inherit;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

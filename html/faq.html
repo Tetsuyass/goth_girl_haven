@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../media/logo.jpeg" type="image/x-icon">
+    <title>FAQ - Rent A Goth</title>
+</head>
+<body>
+<div id="page-container">
+    <header>
+        <nav>
+            <div id="image-logo">
+                <a href="../index.html"><img src="../media/ary1ku.jpg" alt="ary1ku simping" /></a>
+            </div>
+            <div id="links">
+                <ul>
+                    <li><a href="profils.html">Profils</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="faq-section">
+        <h1>FAQ – Foire aux âmes tourmentées</h1>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">🦴 Peut-on louer une goth juste pour discuter ?</button>
+                <div class="faq-answer">
+                    <p>Évidemment. Nos goths ne mordent que sur demande. Vous pouvez réserver une session pour parler littérature décadente ou cinéma expressionniste.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">🕯️ Est-ce que les goths sont vraiment sombres ou c’est du cosplay ?</button>
+                <div class="faq-answer">
+                    <p>Chaque gothique est un monde à part entière. Certain·e·s sont sombres depuis la naissance, d'autres le deviennent à force d'écouter du Bauhaus dans le noir.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">🕸️ Puis-je organiser une cérémonie dans un cimetière ?</button>
+                <div class="faq-answer">
+                    <p>Oui, tant que cela respecte les règles locales et que les esprits sont d’accord. Nos goths adorent les ambiances sépulcrales.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">☠️ Proposez-vous des réductions étudiantes ?</button>
+                <div class="faq-answer">
+                    <p>Bien sûr. Les étudiants en art, littérature, philosophie ou esthétique obscure ont 10% sur leur première incantation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rent A Goth. Tous droits réservés. 🌒</p>
+    </footer>
+</div>
+
+<script>
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+        q.addEventListener('click', () => {
+            const open = q.classList.contains('open');
+            document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
+            document.querySelectorAll('.faq-question').forEach(btn => btn.classList.remove('open'));
+
+            if (!open) {
+                const answer = q.nextElementSibling;
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                q.classList.add('open');
+            }
+        });
+    });
+</script>
+</body>
+</html>

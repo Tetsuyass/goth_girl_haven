@@ -1,0 +1,75 @@
+/* === Inscription === */
+
+.inscription-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: $background-color;
+
+  h1 {
+    font-family: "Cinzel", serif;
+    font-size: 38px;
+    color: $primary-color;
+    margin-bottom: 30px;
+  }
+
+  .inscription-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    background-color: darken($secondary-color, 5%);
+    padding: 40px;
+    border: 1px solid $border-color;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    label {
+      font-size: 16px;
+      color: $accent-color;
+      font-family: "Baskerville Old Face", serif;
+      letter-spacing: 0.5px;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      font-size: 16px;
+      background-color: lighten($background-color, 2%);
+      border: 1px solid $border-color;
+      color: $text-color;
+      border-radius: 8px;
+      font-family: "Arial", sans-serif;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 12px;
+      font-size: 16px;
+      font-family: "Cinzel", serif;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
